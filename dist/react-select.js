@@ -2616,7 +2616,11 @@ var AsyncCreatableSelect = function (_React$Component) {
 
 			return React__default.createElement(
 				Async,
-				this.props,
+				_extends({
+					ref: function ref(_ref3) {
+						_this2.async = _ref3;
+					}
+				}, this.props),
 				function (_ref) {
 					var ref = _ref.ref,
 					    asyncProps = objectWithoutProperties(_ref, ['ref']);

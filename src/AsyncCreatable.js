@@ -13,7 +13,9 @@ class AsyncCreatableSelect extends React.Component {
 
 	render () {
 		return (
-			<Async {...this.props}>
+			<Async 
+			ref={(ref) => { this.async = ref }}
+			{...this.props}>
 				{({ ref, ...asyncProps }) => {
 					const asyncRef = ref;
 					return (<Creatable {...asyncProps} >
